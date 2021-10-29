@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="style.css" />
+    <title>Aula 02</title>
+</head>
+<body bgcolor="black">
+    <center>
+    <h1 class="titulo"> Dead By Daylight</h1>
+    <br>
+    <br>
+    <selection>
+        <article class="container1">
+        <h2 class="titulo">Sortear Killer</h2>
+        <button onclick="randomKiller()">Rodar assassino</button>
+    </article>
+    <br>
+    <article class="container2">
+        <div id="aleatorio"><img src="atum.png"></div>
+        <div id="nome">Esta com Sorte?</div>
+    </article>
+    </selection>    
+    <center>
+        <script type="text/javascript">
+        function randomKiller(){
+          (function() {
+            var img = ["Pig.png", "Huntress.jfif", "Freddy.jfif"];
+            var mudar = Math.floor(Math.random() * img.length);
+            document.getElementById("aleatorio").innerHTML = "<img src='" + img[mudar] + "'>";
+            
+            var nome = img[mudar].split(".")
+            document.getElementById("nome").innerHTML = nome[0];
+          })();
+        }
+        </script>
+</body>
+</html>
